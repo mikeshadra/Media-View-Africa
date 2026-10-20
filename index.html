@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Media View Africa</title>
+<meta name="description" content="Media View Africa is a Kenyan digital media, public relations and communication consultancy with a newsroom covering politics, business, agriculture and society.">
+<meta name="theme-color" content="#0a0a0d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400..700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Media View Africa, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 14h6l2.5-4h11L28 14h6a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="20" cy="24" r="7.5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="20" cy="24" r="2.8" fill="#ec3228"/></svg>
+      <b>MEDIA<i>VIEW</i> AFRICA</b>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#services" data-nav="services">Our Services</a>
+      <a href="#newsroom" data-nav="newsroom">Newsroom</a>
+      <a href="#contact" data-nav="contact">Contact Us</a>
+    </nav>
+    <div class="tools">
+      <button class="iconbtn" id="themeBtn" aria-label="Switch light or dark theme" title="Switch theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section class="view" id="view-home" data-view="home">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="kicker mono">Digital media · Public relations · Consultancy</span>
+        <h1>See Africa in <em>full view.</em></h1>
+        <p class="lede">Embracing the digital media revolution. Media View Africa is a Kenyan media company and communication consultancy that reports the stories that matter and helps organisations be heard across the continent.</p>
+        <div class="cta-row">
+          <button class="btn primary" data-go="newsroom">Read the newsroom <span aria-hidden="true">→</span></button>
+          <button class="btn" data-go="contact">Start a brief</button>
+        </div>
+      </div>
+      <div class="finder" id="finder">
+        <canvas id="map" aria-label="Interactive dotted map of Africa with a pulse from Kenya" role="img"></canvas>
+        <i class="br tl"></i><i class="br tr"></i><i class="br bl"></i><i class="br brr"></i>
+        <div class="rec mono"><i></i> Rec · Live desk</div>
+        <div class="tc mono" id="clock">EAT --:--:--</div>
+        <div class="coord mono">Lat <b id="lat">-1.29</b> · Lon <b id="lon">36.82</b></div>
+        <div class="fcap mono">Kenya</div>
+      </div>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="wrap">
+      <span class="live mono">Live desk</span>
+      <div class="tick-win"><div class="tick-track" id="tickTrack"></div></div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="wrap">
+    <div class="sechead">
+      <div><span class="mono muted">From the newsroom</span><h2>Latest stories</h2></div>
+      <button class="link" data-go="newsroom">All stories</button>
+    </div>
+    <div class="home-news" id="homeNews"></div>
+  </div></div>
+
+  <div class="sec"><div class="wrap">
+    <div class="sechead">
+      <div><span class="mono muted">What we do</span><h2>Four disciplines, one newsroom mindset</h2></div>
+    </div>
+    <div class="three">
+      <div class="pillar"><span class="mono red">Digital Media</span><h3>Content that travels</h3><p>Video, photography, social and web content produced to newsroom standards and built for the phone screen.</p><button class="link" data-go="services">Explore services</button></div>
+      <div class="pillar"><span class="mono red">Events Coverage</span><h3>Every moment, covered</h3><p>Corporate events, product launches and social celebrations captured live, with stories and highlights delivered fast.</p><button class="link" data-go="services">Explore services</button></div>
+      <div class="pillar"><span class="mono red">Public Relations</span><h3>Reputation, earned</h3><p>Media relations, press materials and event publicity that put your story in front of the right editors and audiences.</p><button class="link" data-go="services">Explore services</button></div>
+      <div class="pillar"><span class="mono red">Consultancy</span><h3>Clear communication</h3><p>Strategy, messaging and training for organisations that need to speak plainly to the public, partners and press.</p><button class="link" data-go="services">Explore services</button></div>
+    </div>
+  </div></div>
+
+  <div class="sec"><div class="wrap">
+    <div class="sechead">
+      <div><span class="mono muted">Browse by desk</span><h2>Every beat, one feed</h2></div>
+    </div>
+    <div class="desks" id="desks"></div>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2>Have a story, a brand or a campaign to take public?</h2>
+    <button class="btn" data-go="contact">Talk to Media View Africa <span aria-hidden="true">→</span></button>
+  </div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="view" id="view-about" data-view="about" hidden>
+  <div class="phead"><div class="wrap">
+    <span class="kicker mono">About us</span>
+    <h1>Embracing the digital <em class="red" style="font-style:normal">media revolution.</em></h1>
+  </div></div>
+  <div class="sec" style="padding-top:32px"><div class="wrap about-grid">
+    <div class="prose">
+      <p>Media View Africa is a digital media services, public relations and communication consultancy based in Kenya.</p>
+      <p>We work where journalism, communication and technology meet. Our newsroom publishes news, analysis and opinion across politics, business, agriculture and society. Our consultancy helps organisations tell their own stories with the same discipline: verify first, write plainly, publish where people actually read.</p>
+      <p>Audiences across Africa now find information on their phones, in their feeds and in their messages. We build content, campaigns and communication strategies for that reality.</p>
+      <p>We are also on location. From boardrooms and product launches to weddings and community celebrations, our crews cover events as they happen and publish the story while it is still fresh.</p>
+    </div>
+    <figure class="logo-card">
+      <img src="assets/logo.jpg" alt="Media View Africa logo: a camera with the map of Africa as its lens, with the line Digital Media, Public Relations, Consultancy">
+      <figcaption class="mono">Embracing the digital media revolution</figcaption>
+    </figure>
+  </div></div>
+  <div class="sec"><div class="wrap">
+    <div class="sechead"><div><span class="mono muted">How we work</span><h2>Principles behind every story and campaign</h2></div></div>
+    <div class="values">
+      <div class="value"><span class="mono">Accuracy</span><h3>Verified before published</h3><p>Sources checked, claims sourced, corrections made openly.</p></div>
+      <div class="value"><span class="mono">Pace</span><h3>Built for the news cycle</h3><p>Fast turnaround on updates without trading away quality.</p></div>
+      <div class="value"><span class="mono">Context</span><h3>African voices, African framing</h3><p>Stories told from the ground by people who know the place.</p></div>
+      <div class="value"><span class="mono">Results</span><h3>Communication you can measure</h3><p>Clear goals, reach and engagement reported back to clients.</p></div>
+    </div>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <h2>Meet the desk. Tell us what you are working on.</h2>
+    <button class="btn" data-go="contact">Contact us <span aria-hidden="true">→</span></button>
+  </div></div>
+</section>
+
+<!-- SERVICES -->
+<section class="view" id="view-services" data-view="services" hidden>
+  <div class="phead"><div class="wrap">
+    <span class="kicker mono">Our services</span>
+    <h1>Media, PR and communication, <em class="red" style="font-style:normal">under one roof.</em></h1>
+    <p class="lede">Choose a discipline to see what is included, then add it to a brief and send it to the team.</p>
+  </div></div>
+  <div class="sec" style="padding-top:32px"><div class="wrap"><div class="acc" id="acc"></div></div></div>
+  <div class="sec"><div class="wrap">
+    <div class="sechead"><div><span class="mono muted">How an engagement runs</span><h2>From first call to measured result</h2></div></div>
+    <div class="steps">
+      <div class="step"><span class="mono">Step 1</span><h3>Listen</h3><p>We learn your audience, goals and the story you want told.</p></div>
+      <div class="step"><span class="mono">Step 2</span><h3>Plan</h3><p>A focused plan with channels, messages, owners and dates.</p></div>
+      <div class="step"><span class="mono">Step 3</span><h3>Produce</h3><p>Writing, filming, design and media outreach, edited to a newsroom standard.</p></div>
+      <div class="step"><span class="mono">Step 4</span><h3>Publish and measure</h3><p>We go live, watch the response and report what worked.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- NEWSROOM -->
+<section class="view" id="view-newsroom" data-view="newsroom" hidden>
+  <div class="phead"><div class="wrap">
+    <span class="kicker mono">The newsroom</span>
+    <h1>News, blogs and <em class="red" style="font-style:normal">analysis.</em></h1>
+    <p class="lede">Reporters and editors publish straight from the newsroom desk. Filter by beat or search the archive.</p>
+  </div></div>
+  <div class="sec" style="padding-top:28px"><div class="wrap">
+    <div class="toolbar">
+      <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="sr">Search stories</span><input id="q" type="search" placeholder="Search headlines, authors, topics" autocomplete="off"></label>
+      <button class="btn primary" id="writeBtn">Write a story</button>
+    </div>
+    <div class="chips filters" id="filters" role="group" aria-label="Filter by category"></div>
+    <p class="mono muted" id="srcNote" style="margin-bottom:16px"></p>
+    <div class="grid-news" id="newsGrid"></div>
+  </div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="view" id="view-contact" data-view="contact" hidden>
+  <div class="phead"><div class="wrap">
+    <span class="kicker mono">Contact us</span>
+    <h1>Let's put your story <em class="red" style="font-style:normal">in view.</em></h1>
+  </div></div>
+  <div class="sec" style="padding-top:32px"><div class="wrap contact-grid">
+    <div>
+      <div class="reach">
+        <div class="reach-row"><div><div class="mono muted">Call</div><div class="val">0700 558355</div></div><button class="btn" data-copy="0700 558355">Copy</button></div>
+        <div class="reach-row"><div><div class="mono muted">Email</div><div class="val">info@mediaviewafrica.co.ke</div></div><button class="btn" data-copy="info@mediaviewafrica.co.ke">Copy</button></div>
+        <div class="reach-row"><div><div class="mono muted">Based in</div><div class="val">Kenya</div></div></div>
+      </div>
+      <p class="muted" style="margin-top:20px">Tell us what you need on the right. Your brief is assembled for you to send by email or share by phone.</p>
+    </div>
+    <div class="panel" id="contactPanel">
+      <form class="form" id="form" novalidate>
+        <label class="f">Your name<input class="in" id="cName" autocomplete="name"><span class="err" id="eName"></span></label>
+        <label class="f">Email<input class="in" id="cEmail" type="email" autocomplete="email"><span class="err" id="eEmail"></span></label>
+        <label class="f full">Organisation (optional)<input class="in" id="cOrg" autocomplete="organization"></label>
+        <div class="full"><div class="mono muted" style="margin-bottom:8px">What do you need?</div><div class="chips" id="svcChips" role="group" aria-label="Services needed"></div></div>
+        <label class="f full">Message<textarea class="in" id="cMsg" placeholder="Tell us about the story, campaign or problem."></textarea><span class="err" id="eMsg"></span></label>
+        <div class="full"><button class="btn primary" type="submit">Prepare my brief</button></div>
+      </form>
+      <div id="sent" hidden><h3 style="margin-bottom:10px">Thank you</h3><p class="muted">Your message has been sent. The Media View Africa team will get back to you.</p></div>
+      <div id="briefOut" hidden>
+        <h3 style="margin-bottom:10px">Your brief is ready</h3>
+        <p class="muted" style="margin-bottom:14px">Copy it and email it to info@mediaviewafrica.co.ke, or read it out when you call 0700 558355.</p>
+        <textarea class="brief in" id="briefText" readonly></textarea>
+        <div class="actions" style="margin-top:14px"><button class="btn primary" id="copyBrief">Copy brief</button><button class="btn" id="editBrief">Edit</button></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <div class="brand" style="margin-bottom:12px"><b>MEDIA<i>VIEW</i> AFRICA</b></div>
+      <p class="muted" style="max-width:26em">A digital media services, PR and communication consultancy. Embracing the digital media revolution.</p>
+    </div>
+    <div><h4>Explore</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Our Services</a></li><li><a href="#newsroom">Newsroom</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+    <div><h4>Reach us</h4><ul><li>0700 558355</li><li>info@mediaviewafrica.co.ke</li></ul></div>
+  </div>
+  <div class="legal"><div class="wrap mono"><span>© 2026 Media View Africa</span><span>Digital Media | Public Relations | Consultancy</span></div></div>
+</footer>
+
+<button class="btn pbtn" id="pBtn">Proposal notes</button>
+
+<!-- reader -->
+<div class="ov" id="reader" hidden role="dialog" aria-modal="true" aria-label="Story"><div class="sheet" id="readerSheet"></div></div>
+
+<!-- editor -->
+<div class="ov" id="editor" hidden role="dialog" aria-modal="true" aria-label="Write a story">
+  <div class="sheet wide">
+    <button class="iconbtn sheet-x" data-close="editor" aria-label="Close editor"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <div class="edit-grid">
+      <form class="edit-form" id="edForm" novalidate>
+        <div><span class="mono muted">Newsroom desk</span><h2 style="font-size:1.8rem;margin-top:6px">Write a story</h2></div>
+        <div class="two">
+          <label class="f">Type<select class="in" id="eKind"><option>News update</option><option>Blog</option><option>Opinion</option><option>Feature</option></select></label>
+          <label class="f">Category<select class="in" id="eCat"></select></label>
+        </div>
+        <label class="f">Headline<input class="in" id="eTitle" maxlength="140" placeholder="A clear, specific headline"></label>
+        <label class="f">Standfirst<input class="in" id="eDek" maxlength="220" placeholder="One sentence that sets up the story"></label>
+        <label class="f">Story<textarea class="in" id="eBody" style="min-height:220px" placeholder="Write the story. Leave a blank line between paragraphs."></textarea></label>
+        <label class="f">Byline<input class="in" id="eAuthor" maxlength="60" placeholder="Your name"></label>
+        <div class="note" id="edNote"></div>
+        <div class="actions"><button class="btn primary" type="submit" id="pubBtn">Publish</button><button class="btn" type="button" data-close="editor">Close</button><span class="mono muted" id="edCount"></span></div>
+        <span class="err" id="edErr"></span>
+      </form>
+      <div class="edit-prev"><span class="mono muted">Live preview</span><div id="edPrev"></div><p class="mono muted" id="edDraft"></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- proposal -->
+<div class="ov drawer" id="proposal" hidden role="dialog" aria-modal="true" aria-label="Proposal notes">
+  <div class="sheet">
+    <button class="iconbtn sheet-x" data-close="proposal" aria-label="Close proposal notes"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <span class="mono red">Proposal notes</span>
+    <h2>Website proposal for Media View Africa</h2>
+    <p>This page is a working prototype of the proposed site. Copy and sample stories are drafts for the team to confirm.</p>
+    <h3>Site map</h3>
+    <ul><li>Home: live-desk ticker, latest stories, services, beats</li><li>About: story, principles, brand</li><li>Our Services: Digital Media, Events &amp; Media Coverage, PR, Consultancy and a brief builder</li><li>Newsroom: categories, search, reader, publishing desk</li><li>Contact Us: details and enquiry form</li></ul>
+    <h3>Newsroom workflow</h3>
+    <ul><li>Roles: reporter, editor, administrator</li><li>Draft, review and publish states with scheduled posts</li><li>Categories: Politics, Business &amp; Economy, Agriculture, Social &amp; Society, Tech, Sports, Environment</li><li>Story types: news update, blog, opinion, feature</li><li>Images, video embeds, author profiles and tags</li></ul>
+    <h3>Recommended build</h3>
+    <ul><li>Fast static front end with a headless CMS for the newsroom</li><li>Edge hosting and image optimisation for low-bandwidth readers</li><li>SEO, Open Graph cards and Google News-ready structure</li><li>Newsletter sign-up, analytics and a Kiswahili option</li><li>Accessibility checks and mobile-first testing</li></ul>
+    <h3>Delivery phases</h3>
+    <ul><li>Discover: goals, audience, content audit</li><li>Design: brand system and page designs</li><li>Build: front end, CMS, newsroom roles</li><li>Launch: training, migration, go-live support</li></ul>
+    <h3>In this prototype</h3>
+    <ul><li>Publishing works for signed-in staff with edit access; stories are shared live</li><li>The contact form prepares a brief to send by email or phone; automated delivery comes with the production build</li></ul>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
