@@ -1,0 +1,12 @@
+{
+  "name": "media-view-africa-website",
+  "version": "1.0.0",
+  "description": "Website for Media View Africa: home, about, services, newsroom and contact.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
